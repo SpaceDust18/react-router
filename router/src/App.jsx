@@ -1,30 +1,31 @@
 import './index.css'
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Red from './Components/Red.jsx';
 import Home from './Components/Home.jsx';
 import Blue from './Components/Blue.jsx';
+import NavBar from './Components/NavBar.jsx';
+import Footer from './Components/Footer.jsx';
+
+
 
 export default function App() {
 
 
   return (
     <>
-      <div id="container">
+      <div>
+        <div id="container">
+          <NavBar />
 
-        <div id="navbar">
-          <Link to="/Home" id='purple'>Home</Link>
-          <Link to="/Blue" id='blue'>Blue</Link>
-          <Link to="/Red" id='red'>Red</Link>
-        </div>
-
-        <div id="main-section">
-          <Routes>
-
-            <Route path="/Home" element={<Home />} />
-            <Route path="/Blue" element={<Blue />} />
-            <Route path="/Red" element={<Red />} />
-
-          </Routes>
+          <div id="main-section">
+            <Routes>
+              <Route path="/" element={<Navigate to="/home" />} />
+              <Route path="/Home" element={<Home />} />
+              <Route path="/Blue" element={<Blue />} />
+              <Route path="/Red" element={<Red />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
       </div>
     </>

@@ -19,7 +19,7 @@ body > div {
 #navbar {
   padding: 2em;
   justify-content: space-evenly;
-  background-color: rgb(129, 173, 217);
+  background-color: rgba(0, 2, 2, 0.22);
   font-size: 25px;
   font-weight: bold;
 }
@@ -55,3 +55,28 @@ body > div {
  #blue {
   color: blue
  }
+
+ html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-section {
+  flex-grow: 1;
+}
+
+#footer {
+  padding: 2em;
+  justify-content: space-evenly;
+  background-color: rgba(0, 2, 2, 0.22);
+  font-size: 25px;
+  font-weight: bold;
+  display: 
+ 
+}
